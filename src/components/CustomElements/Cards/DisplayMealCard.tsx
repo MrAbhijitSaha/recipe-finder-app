@@ -12,7 +12,7 @@ const DisplayMealCard = ({ data }: DisplayMealCardPropsType) => {
 				alt=""
 				height={240}
 				width={240}
-				className="rounded-2xl w-full "
+				className="rounded-2xl w-full"
 			/>
 			<div className="px-2 space-y-4">
 				<h1 className="text-2xl font-epundaSlab">{data.strMeal}</h1>
