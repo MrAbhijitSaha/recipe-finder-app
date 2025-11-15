@@ -1,53 +1,39 @@
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogTrigger } from "@/components/ui/dialog";
 import { Separator } from "@/components/ui/separator";
 import { DisplayMealCardPropsType } from "@/lib/alltypes";
 import Image from "next/image";
-import Link from "next/link";
+import MealDialogCard from "./MealDialogCard";
 
 const DisplayMealCard = ({ data }: DisplayMealCardPropsType) => {
 	return (
-		<div className="bg-foregro flex flex-col items-center p-4 rounded-2xl border-foreground border gap-4">
+		<div className="bg-foregro border-foreground flex flex-col items-center gap-0 rounded-2xl border">
 			<Image
 				src={data.strMealThumb}
-				alt=""
+				alt={data.strMeal}
 				height={240}
 				width={240}
-				className="rounded-2xl w-full"
+				className="w-full rounded-t-2xl"
 			/>
-			<div className="px-2 space-y-4">
-				<h1 className="text-2xl font-epundaSlab">{data.strMeal}</h1>
+			<div className="space-y-4 p-2">
+				<h1 className="font-epundaSlab text-2xl">{data.strMeal}</h1>
 
 				<Separator />
-				<p className="font-epundaSlab">{data.strInstructions}</p>
+				<p className="font-epundaSlab line-clamp-3 text-sm text-wrap">
+					{data.strInstructions}
+				</p>
 				<Separator />
-				<div className="flex justify-between">
-					<h3 className="text-xl">Ingredients</h3>
-					<ul className="grid grid-cols-2 gap-1">{}</ul>
 
-					<Separator
-						orientation="vertical"
-						className="h-48 w-16"
-					/>
-
-					<h3 className="text-xl">Measure</h3>
-					<ul className="grid grid-cols-2 gap-1">{}</ul>
-				</div>
 				<Separator />
-				<div className="md:flex flex-row w-full gap-2 ">
-					<Link
-						target="_blank"
-						href={data.strYoutube}
-						className="w-full">
-						<Button className="w-full">Watch Recipe Video</Button>
-					</Link>
 
-					<Link
-						target="_blank"
-						href={`https://www.google.com/search?q=${data.strMeal}`}
-						className=" w-full">
-						<Button className="w-full">Search On Internet</Button>
-					</Link>
-				</div>
+				<Dialog>
+					<DialogTrigger asChild>
+						<Button className="w-full">See Full Recipe</Button>
+					</DialogTrigger>
+					<MealDialogCard data={data} />
+					{/* You can also pass the data prop like this: */}
+					{/* <MealDialogCard data={data} /> */}
+				</Dialog>
 			</div>
 		</div>
 	);

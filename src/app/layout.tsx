@@ -27,7 +27,7 @@ const RootLayout = ({ children }: RootLayoutPropsType) => {
 					<header className="container mx-auto px-3 py-4">
 						<NavigationBar />
 					</header>
-					<main className="container px-9 mx-auto">{children}</main>
+					<main className="container mx-auto px-9">{children}</main>
 					<footer className="py-4">
 						<Footer />
 					</footer>
