@@ -2,14 +2,14 @@ import SearchForHomeHero from "../Forms/SearchForHomeHero";
 
 const HomeHero = () => {
 	return (
-		<div className="py-16 space-y-2">
-			<div className="text-2xl md:text-6xl font-semibold">
+		<div className="space-y-2 py-16">
+			<div className="text-2xl font-semibold md:text-6xl">
 				Welcome to <br />
-				<span className="italic font-normal text-7xl font-cormorant">
+				<span className="font-cormorant text-7xl font-normal italic">
 					RECIPE FINDER.
 				</span>
 			</div>
-			<div className="text-lg font-robotoSlab">
+			<div className="font-robotoSlab text-lg">
 				Not sure what to make? Just search below for a meal name or any
 				ingredient we’ll handle the rest.
 			</div>

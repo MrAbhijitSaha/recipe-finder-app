@@ -69,3 +69,16 @@ export interface Meal {
 export type DisplayMealCardPropsType = {
 	data: Meal;
 };
+
+//type for user location
+export interface GeoLocationState {
+	country: string;
+	regionName: string;
+	city: string;
+	userIp: string;
+}
+
+export type Ingredient = {
+	ingredient: string;
+	measure: string;
+};

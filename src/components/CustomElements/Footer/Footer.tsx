@@ -5,9 +5,9 @@ const Footer = () => {
 		<div className="grid place-items-center">
 			Design & Developed By{" "}
 			<Link
-				href={"https://abhijitsaha.vercel.app/"}
+				href={"https://github.com/MrAbhijitSaha"}
 				target="_blank"
-				className="underline underline-offset-4 decoration-blue-800 font-kalam">
+				className="font-kalam underline decoration-blue-800 underline-offset-4">
 				Abhijit
 			</Link>
 		</div>
