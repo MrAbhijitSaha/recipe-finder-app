@@ -7,7 +7,7 @@ import MealDialogCard from "./MealDialogCard";
 
 const DisplayMealCard = ({ data }: DisplayMealCardPropsType) => {
 	return (
-		<div className="bg-foregro border-foreground flex flex-col items-center gap-0 rounded-2xl border">
+		<div className="bg-foregro border-foreground flex flex-col items- gap-0 rounded-2xl border">
 			<Image
 				src={data.strMealThumb}
 				alt={data.strMeal}
@@ -24,15 +24,12 @@ const DisplayMealCard = ({ data }: DisplayMealCardPropsType) => {
 				</p>
 				<Separator />
 
-				<Separator />
 
 				<Dialog>
 					<DialogTrigger asChild>
 						<Button className="w-full">See Full Recipe</Button>
 					</DialogTrigger>
 					<MealDialogCard data={data} />
-					{/* You can also pass the data prop like this: */}
-					{/* <MealDialogCard data={data} /> */}
 				</Dialog>
 			</div>
 		</div>
