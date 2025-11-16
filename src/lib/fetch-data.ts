@@ -25,6 +25,7 @@ export const fetchRecipeByName = async (name: string | undefined) => {
 			timeout: 5000,
 		})
 		.json<Root>();
+
 	console.log(meals);
 
 	return meals;

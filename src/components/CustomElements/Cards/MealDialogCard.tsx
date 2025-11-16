@@ -12,10 +12,6 @@ import { DisplayMealCardPropsType } from "@/lib/alltypes";
 import { getIngredients } from "@/lib/create-ingredients-list";
 import Link from "next/link";
 
-// You'll probably want to pass the 'data' prop in here too
-// import { DisplayMealCardPropsType } from "@/lib/alltypes";
-
-// const MealDialogCard = ({ data }: DisplayMealCardPropsType) => { // <-- Like this
 const MealDialogCard = ({ data }: DisplayMealCardPropsType) => {
 	const ingredients = getIngredients(data);
 
@@ -32,7 +28,7 @@ const MealDialogCard = ({ data }: DisplayMealCardPropsType) => {
 				<div className="space-y-4">
 					<h3 className="text-2xl">Ingredients</h3>
 					<Separator />
-					<ul>
+					<ul className="space-y-2">
 						{ingredients.map((ing, index) => (
 							<li key={index}>{ing.ingredient}</li>
 						))}
@@ -45,7 +41,7 @@ const MealDialogCard = ({ data }: DisplayMealCardPropsType) => {
 				<div className="space-y-4">
 					<h3 className="text-2xl">Measure</h3>
 					<Separator />
-					<ul className="text-end">
+					<ul className="space-y-2 text-end">
 						{ingredients.map((msr, index) => (
 							<li key={index}>{msr.measure}</li>
 						))}
@@ -53,24 +49,27 @@ const MealDialogCard = ({ data }: DisplayMealCardPropsType) => {
 				</div>
 			</div>
 			<div className="flex w-full flex-col gap-2">
-				<Button className="w-full" asChild variant={"outline"}>
-				<Link
-					target="_blank"
-					href={data.strYoutube}
-					>
+				<Button
+					className="w-full"
+					asChild
+					variant={"outline"}>
+					<Link
+						target="_blank"
+						href={data.strYoutube}>
+						Watch Recipe Video
+					</Link>
+				</Button>
 
-					Watch Recipe Video
-				</Link>
-					</Button>
-
-					<Button className="w-full" asChild variant="outline">
-				<Link
-					target="_blank"
-					href={`https://www.google.com/search?q=${data.strMeal}`}
-					>
+				<Button
+					className="w-full"
+					asChild
+					variant="outline">
+					<Link
+						target="_blank"
+						href={`https://www.google.com/search?q=${data.strMeal}`}>
 						Search On Internet
-				</Link>
-						</Button>
+					</Link>
+				</Button>
 			</div>
 		</DialogContent>
 	);

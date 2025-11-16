@@ -1,4 +1,4 @@
-import DisplayMealCardSkeleton from "@/components/CustomElements/Cards/DisplayMealCardSkeleton";
+import MealDialogCardSkeleton from "@/components/CustomElements/Cards/DisplayMealCardSkeleton";
 import SearchForHomeHero from "@/components/CustomElements/Forms/SearchForHomeHero"; // or its skeleton
 import { Skeleton } from "@/components/ui/skeleton";
 
@@ -13,9 +13,9 @@ export default function Loading() {
 
 			{/* Your grid of skeletons */}
 			<section className="grid grid-cols-1 gap-4 md:grid-cols-3">
-				<DisplayMealCardSkeleton />
-				<DisplayMealCardSkeleton />
-				<DisplayMealCardSkeleton />
+				<MealDialogCardSkeleton />
+				<MealDialogCardSkeleton />
+				<MealDialogCardSkeleton />
 			</section>
 		</section>
 	);
