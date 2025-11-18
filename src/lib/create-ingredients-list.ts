@@ -1,7 +1,7 @@
-import { Ingredient, Meal } from "./alltypes";
+import {  IngredientType, Meal } from "./alltypes";
 
-export const getIngredients = (data: Meal): Ingredient[] => {
-	const ingredients: Ingredient[] = [];
+export const getIngredients = (data: Meal): IngredientType[] => {
+	const ingredients: IngredientType[] = [];
 
 	for (let i = 1; i <= 20; i++) {
 		const ingKey = `strIngredient${i}` as keyof Meal;
