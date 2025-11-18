@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import SearchForHomeHero from "../Forms/SearchForHomeHero";
 
 const HomeHero = () => {
@@ -14,7 +15,7 @@ const HomeHero = () => {
 				ingredient we’ll handle the rest.
 			</div>
 			<SearchForHomeHero />
-			<div className="font-robotoSlab text-lg">Or Try a Random Meal </div>
+			<Button className="font-robotoSlab text-lg" variant={"outline"}>Or Try a Random Meal </Button>
 		</div>
 	);
 };

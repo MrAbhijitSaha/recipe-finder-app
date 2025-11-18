@@ -1,23 +1,39 @@
 "use client";
-
+import { SlidingNumber } from "@/components/ui/sliding-number";
 import { useEffect, useState } from "react";
 
 const CurrentTime = () => {
-	const [currentTime, setCurrentTime] = useState(new Date());
+	const [hours, setHours] = useState(new Date().getHours());
+	const [minutes, setMinutes] = useState(new Date().getMinutes());
+	const [seconds, setSeconds] = useState(new Date().getSeconds());
 
 	useEffect(() => {
-		const timerId = setInterval(() => {
-			setCurrentTime(new Date());
+		const interval = setInterval(() => {
+			setHours(new Date().getHours());
+			setMinutes(new Date().getMinutes());
+			setSeconds(new Date().getSeconds());
 		}, 1000);
-
-		return () => clearInterval(timerId);
+		return () => clearInterval(interval);
 	}, []);
 
 	return (
-		<div>
-			<div>{currentTime.toLocaleString()}</div>
+		<div className="flex items-center gap-0.5 font-mono">
+			<SlidingNumber
+				value={hours}
+				padStart={true}
+			/>
+			<span className="text-zinc-500">:</span>
+			<SlidingNumber
+				value={minutes}
+				padStart={true}
+			/>
+			<span className="text-zinc-500">:</span>
+			<SlidingNumber
+				value={seconds}
+				padStart={true}
+			/>
 		</div>
 	);
-};
+}
 
-export default CurrentTime;
+export default CurrentTime

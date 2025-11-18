@@ -1,9 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-
-
-
 /* custom fonts */
 
 @theme {
@@ -12,7 +9,6 @@
   --font-robotoSlab: var(--font-robotoSlab);
   --font-epundaSlab: var(--font-epundaSlab);
 }
-
 
 @custom-variant dark (&:is(.dark *));
 
