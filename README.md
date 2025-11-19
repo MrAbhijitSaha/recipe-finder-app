@@ -1,5 +1,7 @@
 # Recipe Finder App 🍔🥗
 
+[![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://findrecipeapp.vercel.app/)
+
 A modern, responsive web application built with **Next.js 16** that allows users to search for recipes and view detailed ingredients. The app features a sleek UI with dark mode support, real-time clock, and user location detection.
 
 ## 🚀 Features
