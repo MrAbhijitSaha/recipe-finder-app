@@ -20,7 +20,12 @@ const page = async ({ params }: { params: Promise<{ name?: string }> }) => {
 
 	return (
 		<section className="space-y-4">
-			<div className="">You Searched {userInputMealName}</div>
+			<div className="text-lg text-gray-400">
+				You searched for :{" "}
+				<span className="uppercase text-foreground">
+					{userInputMealName}
+				</span>
+			</div>
 
 			<SearchForHomeHero />
 
@@ -29,7 +34,12 @@ const page = async ({ params }: { params: Promise<{ name?: string }> }) => {
 				{fetchError ? (
 					<div className="font-bold text-red-500">{fetchError}</div>
 				) : fetchMealsData === null ? (
-					<div>No meals found for {userInputMealName}</div>
+					<div className="text-lg text-gray-400">
+						{"We couldn't find any matches for "}:{" "}
+						<span className="text-foreground uppercase">
+							{userInputMealName}
+						</span>
+					</div>
 				) : (
 					<>
 						{fetchMealsData.map((item) => (

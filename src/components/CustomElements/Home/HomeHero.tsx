@@ -1,9 +1,9 @@
-import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import SearchForHomeHero from "../Forms/SearchForHomeHero";
 
 const HomeHero = () => {
 	return (
-		<div className="space-y-2 py-16">
+		<section className="space-y-2 py-16">
 			<div className="text-2xl font-semibold md:text-6xl">
 				Welcome to <br />
 				<span className="font-cormorant text-7xl font-normal italic">
@@ -15,8 +15,15 @@ const HomeHero = () => {
 				ingredient we’ll handle the rest.
 			</div>
 			<SearchForHomeHero />
-			<Button className="font-robotoSlab text-lg" variant={"outline"}>Or Try a Random Meal </Button>
-		</div>
+			<div>
+				{"Don't want to search? "}
+				<Link
+					href={"/randommeal"}
+					className="text-[#F4D03F] underline">
+					Try A Surprise Meal.
+				</Link>
+			</div>{" "}
+		</section>
 	);
 };
 

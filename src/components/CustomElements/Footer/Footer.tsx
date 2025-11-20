@@ -3,7 +3,7 @@ import Link from "next/link";
 const Footer = () => {
 	return (
 		<div className="grid place-items-center">
-			Design & Developed By{" "}
+			Design & Developed By
 			<Link
 				href={"https://github.com/MrAbhijitSaha"}
 				target="_blank"

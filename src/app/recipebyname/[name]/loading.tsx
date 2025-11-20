@@ -1,8 +1,8 @@
-import MealDialogCardSkeleton from "@/components/CustomElements/Cards/DisplayMealCardSkeleton";
+import MealDialogCardSkeleton from "@/components/CustomElements/Cards/Skeleton/DisplayMealCardSkeleton";
 import SearchForHomeHero from "@/components/CustomElements/Forms/SearchForHomeHero"; // or its skeleton
 import { Skeleton } from "@/components/ui/skeleton";
 
-export default function Loading() {
+const Loading = () => {
 	return (
 		<section className="space-y-4">
 			{/* Skeleton for "You Searched..." text */}
@@ -19,4 +19,6 @@ export default function Loading() {
 			</section>
 		</section>
 	);
-}
+};
+
+export default Loading;

@@ -111,3 +111,6 @@ export interface GeoLocationState {
 	org: string;
 }
 
+export type RefreshPageBtnProps = {
+	text: string;
+};

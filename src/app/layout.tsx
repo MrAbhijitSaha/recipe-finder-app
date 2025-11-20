@@ -18,17 +18,19 @@ const RootLayout = ({ children }: RootLayoutPropsType) => {
 			className={allFontVariables}
 			lang="en"
 			suppressHydrationWarning>
-			<body>
+			<body className="flex min-h-screen flex-col">
 				<ThemeProvider
 					attribute={"class"}
 					defaultTheme="dark"
 					enableSystem
 					disableTransitionOnChange>
-					<header className="container mx-auto px-3 py-4">
+					<header className="container mx-auto px-3 py-4 border-b">
 						<NavigationBar />
 					</header>
-					<main className="container mx-auto px-9">{children}</main>
-					<footer className="py-4">
+					<main className="container mx-auto flex-1 px-9 py-4">
+						{children}
+					</main>
+					<footer className="py-4 pt-2 mt-6 bg-foreground/5">
 						<Footer />
 					</footer>
 				</ThemeProvider>
