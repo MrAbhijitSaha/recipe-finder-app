@@ -16,7 +16,7 @@ const MealDialogCard = ({ data }: DisplayMealCardPropsType) => {
 	const ingredients = getIngredients(data);
 
 	return (
-		<DialogContent className="max-h-screen overflow-y-auto">
+		<DialogContent className="max-h-96 overflow-y-auto md:max-h-screen">
 			<DialogHeader>
 				<DialogTitle className="text-base md:text-2xl">
 					{data.strMeal}

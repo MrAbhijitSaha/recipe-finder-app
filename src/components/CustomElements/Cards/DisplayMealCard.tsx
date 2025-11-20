@@ -24,7 +24,6 @@ const DisplayMealCard = ({ data }: DisplayMealCardPropsType) => {
 				</p>
 				<Separator />
 
-
 				<Dialog>
 					<DialogTrigger asChild>
 						<Button className="w-full">See Full Recipe</Button>
