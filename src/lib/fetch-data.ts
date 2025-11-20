@@ -30,3 +30,15 @@ export const fetchRecipeByName = async (name: string | undefined) => {
 
 	return meals;
 };
+
+export const fetchARandomMeal = async () => {
+	const { meals } = await ky
+		.get(`${env.RECIPE_API}/random.php`, {
+			timeout: 5000,
+		})
+		.json<Root>();
+
+	console.log("your random meal : ", meals);
+
+	return meals;
+};
