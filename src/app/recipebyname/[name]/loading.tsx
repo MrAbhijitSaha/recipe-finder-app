@@ -9,7 +9,7 @@ const Loading = () => {
 			<Skeleton className="h-5 w-48" />
 
 			{/* The actual search bar (or a skeleton for it) */}
-			<SearchForHomeHero />
+			<SearchForHomeHero mealName="" />
 
 			{/* Your grid of skeletons */}
 			<section className="grid grid-cols-1 gap-4 md:grid-cols-3">
