@@ -16,7 +16,7 @@ const page = () => {
 				ingredient we’ll handle the rest.
 			</p>
 			{/* search bar for meal  */}
-			<SearchFieldForByName />
+			<SearchFieldForByName mealName="" />
 			{/* try random recpe */}
 			<div>
 				Don't want to search?{" "}
