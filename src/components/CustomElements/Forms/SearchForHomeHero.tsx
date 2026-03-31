@@ -25,7 +25,8 @@ const SearchFieldForByName = (mealName: { mealName: string }) => {
 	});
 
 	const onSubmit = (data: { mealName: string }) => {
-		router.push(`/recipebyname/${data.mealName}`);
+		const encodedMealName = encodeURIComponent(data.mealName);
+		router.push(`/recipebyname/${encodedMealName}`);
 	};
 
 	return (
@@ -55,8 +56,9 @@ const SearchFieldForByName = (mealName: { mealName: string }) => {
 				type="submit"
 				className="rounded-s-none py-7"
 				variant={"outline"}
-				disabled={isSubmitting}>
-				<Search />
+				disabled={isSubmitting}
+				aria-label="Search meals">
+				<Search aria-hidden="true" />
 			</Button>
 		</form>
 	);

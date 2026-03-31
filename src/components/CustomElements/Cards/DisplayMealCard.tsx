@@ -7,7 +7,7 @@ import MealDialogCard from "./MealDialogCard";
 
 const DisplayMealCard = ({ data }: DisplayMealCardPropsType) => {
 	return (
-		<div className="border-foreground items- flex flex-col gap-0 rounded-2xl border">
+		<div className="border-foreground flex flex-col gap-0 rounded-2xl border">
 			<Image
 				src={data.strMealThumb}
 				alt={data.strMeal}

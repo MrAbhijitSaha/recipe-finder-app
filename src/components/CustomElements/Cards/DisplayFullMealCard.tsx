@@ -13,7 +13,6 @@ const DisplayFullMealCard = ({ data }: DisplayMealCardPropsType) => {
 			<Image
 				src={data.strMealThumb}
 				alt={data.strMeal}
-				loading="eager"
 				height={240}
 				width={240}
 				className="w-full rounded-t-2xl"

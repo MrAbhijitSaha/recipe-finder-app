@@ -11,7 +11,6 @@ export const fetchRecipeByLetter = async (letter: string | undefined) => {
 			timeout: 5000,
 		})
 		.json<Root>();
-	console.log(meals);
 
 	return meals;
 };
@@ -55,7 +54,7 @@ export const fetchARandomMeal = async () => {
 
 		return {
 			isSuccess: true,
-			message: " ",
+			message: "",
 			data: meals,
 		};
 	} catch (err) {
