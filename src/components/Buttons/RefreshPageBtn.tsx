@@ -8,8 +8,8 @@ const RefreshPageBtn = ({ text }: RefreshPageBtnProps) => {
 	const router = useRouter();
 	return (
 		<Button
-			className="rounded-full border-gray-600 text-foreground transition-colors hover:border-[#F4D03F] hover:bg-transparent hover:text-[#F4D03F]"
-			variant={"outline"}
+			className="text-foreground hover:text-primary rounded-full border-gray-600 px-8 py-6 text-xl"
+			variant="outline"
 			onClick={() => router.refresh()}>
 			{text}
 		</Button>

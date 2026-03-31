@@ -1,4 +1,4 @@
-import DisplayFullMealCardSkeleton from "@/components/CustomElements/Cards/Skeleton/DisplayFullMealCardSkeleton";
+import DisplayFullMealCardSkeleton from "@/components/CustomElements/Skeleton/DisplayFullMealCardSkeleton";
 
 const loading = () => {
 	return (

@@ -3,7 +3,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 const DisplayMealCardSkeleton = () => {
 	return (
-		<div className="bg-foregro border-foreground items- flex flex-col gap-0 rounded-2xl border">
+		<div className="bg-foreground border-foreground items- flex flex-col gap-0 rounded-2xl border">
 			<Skeleton className="h-60 w-full rounded-t-2xl" />
 
 			<div className="space-y-4 p-2">

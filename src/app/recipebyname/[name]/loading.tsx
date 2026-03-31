@@ -1,5 +1,5 @@
-import MealDialogCardSkeleton from "@/components/CustomElements/Cards/Skeleton/DisplayMealCardSkeleton";
 import SearchForHomeHero from "@/components/CustomElements/Forms/SearchForHomeHero"; // or its skeleton
+import MealDialogCardSkeleton from "@/components/CustomElements/Skeleton/DisplayMealCardSkeleton";
 import { Skeleton } from "@/components/ui/skeleton";
 
 const Loading = () => {

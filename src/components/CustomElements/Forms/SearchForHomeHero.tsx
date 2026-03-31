@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { Field } from "@/components/ui/field";
+import { Field, FieldError } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { SearchFieldForByNameSchema } from "@/lib/all-schema";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -9,44 +9,53 @@ import { useRouter } from "next/navigation";
 
 import { Controller, useForm } from "react-hook-form";
 
-const SearchFieldForByName = () => {
+const SearchFieldForByName = (mealName: { mealName: string }) => {
 	const router = useRouter();
 
-	const { control, handleSubmit } = useForm({
+	const {
+		control,
+		handleSubmit,
+		formState: { isSubmitting },
+	} = useForm({
 		resolver: zodResolver(SearchFieldForByNameSchema),
 		defaultValues: {
-			mealName: "",
+			mealName: `${mealName.mealName || ""}`,
 		},
 		mode: "all",
 	});
 
 	const onSubmit = (data: { mealName: string }) => {
-		console.log("data");
-		console.log(data);
 		router.push(`/recipebyname/${data.mealName}`);
 	};
 
 	return (
 		<form
 			onSubmit={handleSubmit(onSubmit)}
-			className="relative max-w-xl">
+			className="flex max-w-xl gap-2">
 			<Controller
 				name="mealName"
 				control={control}
-				render={({ field }) => (
+				render={({ field, fieldState }) => (
 					<Field>
 						<Input
 							{...field}
+							aria-invalid={fieldState.invalid}
 							placeholder="Enter a Meal Name here"
-							className="rounded-full border-blue-600 px-6 py-6 focus-visible:border-blue-600 focus-visible:ring-0 focus-visible:ring-offset-0 dark:border-blue-400"
+							className="rounded-e-none py-7"
 						/>
+
+						{fieldState.invalid && (
+							<FieldError errors={[fieldState.error]} />
+						)}
 					</Field>
 				)}
 			/>
+
 			<Button
 				type="submit"
-				className="text-foreground absolute end-0 top-1/2 -translate-y-1/2 transform cursor-pointer bg-transparent hover:bg-transparent"
-				variant={"default"}>
+				className="rounded-s-none py-7"
+				variant={"outline"}
+				disabled={isSubmitting}>
 				<Search />
 			</Button>
 		</form>

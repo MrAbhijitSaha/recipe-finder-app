@@ -1,37 +1,29 @@
-import { Cormorant, Epunda_Slab, Kalam, Roboto_Slab } from "next/font/google";
+import { AR_One_Sans, Fragment_Mono, Inter } from "next/font/google";
 
-const kalam = Kalam({
+const mono = Fragment_Mono({
 	weight: "400",
 	display: "swap",
 	style: "normal",
 	subsets: ["latin"],
-	variable: "--font-kalam",
+	variable: "--font-mono",
 });
 
-const cormorant = Cormorant({
+const sans = AR_One_Sans({
 	display: "swap",
 	style: "normal",
 	subsets: ["latin"],
-	variable: "--font-cormorant",
+	variable: "--font-sans",
 });
 
-const robotoSlab = Roboto_Slab({
+const serif = Inter({
 	display: "swap",
 	style: "normal",
 	subsets: ["latin"],
-	variable: "--font-robotoSlab",
-});
-
-const epundaSlab = Epunda_Slab({
-	display: "swap",
-	style: "normal",
-	subsets: ["latin"],
-	variable: "--font-epundaSlab",
+	variable: "--font-serif",
 });
 
 export const allFontVariables = [
-	kalam.variable,
-	cormorant.variable,
-	robotoSlab.variable,
-	epundaSlab.variable,
+	mono.variable,
+	sans.variable,
+	serif.variable,
 ].join(" ");

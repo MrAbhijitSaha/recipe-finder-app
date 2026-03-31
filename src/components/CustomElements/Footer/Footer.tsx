@@ -7,7 +7,7 @@ const Footer = () => {
 			<Link
 				href={"https://github.com/MrAbhijitSaha"}
 				target="_blank"
-				className="font-kalam underline decoration-blue-800 underline-offset-4">
+				className="font-adamina underline decoration-blue-800 underline-offset-4">
 				Abhijit
 			</Link>
 		</div>
