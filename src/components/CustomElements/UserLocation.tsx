@@ -1,6 +1,7 @@
 "use client";
 
 import { GeoLocationState } from "@/lib/alltypes";
+import { env } from "@/lib/env";
 import ky from "ky";
 import { useEffect, useState } from "react";
 
@@ -10,7 +11,7 @@ const UserLocation = () => {
 	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
-		const ipApiUrl = process.env.NEXT_PUBLIC_IP_API;
+		const ipApiUrl = env.NEXT_PUBLIC_IP_API;
 		if (!ipApiUrl) {
 			setError("NEXT_PUBLIC_IP_API is not defined");
 			setIsLoading(false);
