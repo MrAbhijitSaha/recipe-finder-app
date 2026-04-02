@@ -1,5 +1,6 @@
 import DisplayMealCard from "@/components/CustomElements/Cards/DisplayMealCard";
-import SearchForHomeHero from "@/components/CustomElements/Forms/SearchFieldForByName";
+import SearchFieldForByName from "@/components/CustomElements/Forms/SearchFieldForByName";
+
 import {
 	Pagination,
 	PaginationContent,
@@ -57,7 +58,7 @@ const page = async ({
 				</span>
 			</div>
 
-			<SearchForHomeHero mealName={userInputMealName || ""} />
+			<SearchFieldForByName mealName={userInputMealName || ""} />
 
 			<section className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
 				{!isSuccess ? (
