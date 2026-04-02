@@ -1,4 +1,6 @@
 import { ReactNode } from "react";
+import z from "zod";
+import { SearchFieldForByNameSchema } from "./all-schema";
 
 export type RootLayoutPropsType = Readonly<{
 	children: ReactNode;
@@ -70,15 +72,10 @@ export type DisplayMealCardPropsType = {
 	data: Meal;
 };
 
-
 export type IngredientType = {
 	ingredient: string;
 	measure: string;
 };
-
-
-
-
 
 //type for user location
 export interface GeoLocationState {
@@ -114,3 +111,7 @@ export interface GeoLocationState {
 export type RefreshPageBtnProps = {
 	text: string;
 };
+
+export type SearchFieldForByNameSchemaType = z.infer<
+	typeof SearchFieldForByNameSchema
+>;

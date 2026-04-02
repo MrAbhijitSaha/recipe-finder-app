@@ -1,9 +1,14 @@
+"use client";
+
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Notfound = () => {
+	const router = useRouter();
+
 	return (
-		<div>
+		<section className="grid place-items-center">
 			<Image
 				src="/gif/pagenotfound.gif"
 				alt="Loading animation"
@@ -12,9 +17,18 @@ const Notfound = () => {
 				unoptimized
 				loading="eager"
 			/>
-			<div className="">Page not Found</div>
-			<Link href={"/"}>HOME</Link>
-		</div>
+
+			<p className="">
+				Page Not Found <br />
+				Back To{" "}
+				<Button
+					className="text-xl"
+					variant="link"
+					onClick={() => router.replace("/")}>
+					HOME
+				</Button>
+			</p>
+		</section>
 	);
 };
 

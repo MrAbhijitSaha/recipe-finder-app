@@ -1,9 +1,7 @@
-import z4 from "zod/v4";
+import z from "zod";
 
-export const SearchFieldForByNameSchema = z4.object({
-	mealName: z4.string(),
+export const SearchFieldForByNameSchema = z.object({
+	mealName: z
+		.string()
+		.min(2, { error: "Meal name must be at least 2 characters" }),
 });
-
-export type SearchFieldForByNameSchemaType = z4.infer<
-	typeof SearchFieldForByNameSchema
->;

@@ -7,7 +7,7 @@ import MealDialogCard from "./MealDialogCard";
 
 const DisplayMealCard = ({ data }: DisplayMealCardPropsType) => {
 	return (
-		<div className="bg-foregro border-foreground flex flex-col items- gap-0 rounded-2xl border">
+		<div className="border-foreground flex flex-col gap-0 rounded-2xl border">
 			<Image
 				src={data.strMealThumb}
 				alt={data.strMeal}
@@ -16,10 +16,10 @@ const DisplayMealCard = ({ data }: DisplayMealCardPropsType) => {
 				className="w-full rounded-t-2xl"
 			/>
 			<div className="space-y-4 p-2">
-				<h1 className="font-epundaSlab text-2xl">{data.strMeal}</h1>
+				<h1 className="text-2xl">{data.strMeal}</h1>
 
 				<Separator />
-				<p className="font-epundaSlab line-clamp-3 text-sm text-wrap">
+				<p className="line-clamp-3 text-sm text-wrap">
 					{data.strInstructions}
 				</p>
 				<Separator />

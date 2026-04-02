@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dialog";
 import { Separator } from "@/components/ui/separator";
 import { DisplayMealCardPropsType } from "@/lib/alltypes";
-import { getIngredients } from "@/lib/create-ingredients-list";
+import { getIngredients } from "@/lib/createIngredients-list";
 import Link from "next/link";
 
 const MealDialogCard = ({ data }: DisplayMealCardPropsType) => {
