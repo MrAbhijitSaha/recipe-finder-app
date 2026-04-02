@@ -13,7 +13,8 @@ const UserLocation = () => {
 	useEffect(() => {
 		const ipApiUrl = env.NEXT_PUBLIC_IP_API;
 		if (!ipApiUrl) {
-			setError("NEXT_PUBLIC_IP_API is not defined");
+			console.error("Missing NEXT_PUBLIC_IP_API");
+			setError("Location service is currently unavailable.");
 			setIsLoading(false);
 			return;
 		}
