@@ -1,4 +1,4 @@
-import SearchFieldForByName from "@/components/CustomElements/Forms/SearchForHomeHero";
+import SearchFieldForByName from "@/components/CustomElements/Forms/SearchFieldForByName";
 import Link from "next/link";
 
 const page = () => {

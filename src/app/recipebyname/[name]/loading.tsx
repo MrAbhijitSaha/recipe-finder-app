@@ -1,5 +1,5 @@
-import SearchForHomeHero from "@/components/CustomElements/Forms/SearchForHomeHero"; // or its skeleton
-import MealDialogCardSkeleton from "@/components/CustomElements/Skeleton/DisplayMealCardSkeleton";
+import SearchFieldForByName from "@/components/CustomElements/Forms/SearchFieldForByName";
+import DisplayFullMealCardSkeleton from "@/components/CustomElements/Skeleton/DisplayFullMealCardSkeleton";
 import { Skeleton } from "@/components/ui/skeleton";
 
 const Loading = () => {
@@ -8,14 +8,14 @@ const Loading = () => {
 			{/* Skeleton for "You Searched..." text */}
 			<Skeleton className="h-5 w-48" />
 
-			{/* The actual search bar (or a skeleton for it) */}
-			<SearchForHomeHero mealName="" />
+			{/* The actual search bar  */}
+			<SearchFieldForByName mealName="" />
 
 			{/* Your grid of skeletons */}
 			<section className="grid grid-cols-1 gap-4 md:grid-cols-3">
-				<MealDialogCardSkeleton />
-				<MealDialogCardSkeleton />
-				<MealDialogCardSkeleton />
+				<DisplayFullMealCardSkeleton />
+				<DisplayFullMealCardSkeleton />
+				<DisplayFullMealCardSkeleton />
 			</section>
 		</section>
 	);

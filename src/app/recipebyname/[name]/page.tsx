@@ -1,5 +1,5 @@
 import DisplayMealCard from "@/components/CustomElements/Cards/DisplayMealCard";
-import SearchForHomeHero from "@/components/CustomElements/Forms/SearchForHomeHero";
+import SearchForHomeHero from "@/components/CustomElements/Forms/SearchFieldForByName";
 import {
 	Pagination,
 	PaginationContent,
