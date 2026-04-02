@@ -10,7 +10,14 @@ const UserLocation = () => {
 	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
-		ky.get("https://ipapi.co/json/")
+		const ipApiUrl = process.env.NEXT_PUBLIC_IP_API;
+		if (!ipApiUrl) {
+			setError("NEXT_PUBLIC_IP_API is not defined");
+			setIsLoading(false);
+			return;
+		}
+
+		ky.get(ipApiUrl)
 			.json<GeoLocationState>()
 			.then(setLocation)
 			.catch((err) => {
