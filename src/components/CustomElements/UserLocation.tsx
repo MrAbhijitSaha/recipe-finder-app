@@ -1,6 +1,7 @@
 "use client";
 
 import { GeoLocationState } from "@/lib/alltypes";
+import { env } from "@/lib/env";
 import ky from "ky";
 import { useEffect, useState } from "react";
 
@@ -10,7 +11,15 @@ const UserLocation = () => {
 	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
-		ky.get("https://ipapi.co/json/")
+		const ipApiUrl = env.NEXT_PUBLIC_IP_API;
+		if (!ipApiUrl) {
+			console.error("Missing NEXT_PUBLIC_IP_API");
+			setError("Location service is currently unavailable.");
+			setIsLoading(false);
+			return;
+		}
+
+		ky.get(ipApiUrl)
 			.json<GeoLocationState>()
 			.then(setLocation)
 			.catch((err) => {

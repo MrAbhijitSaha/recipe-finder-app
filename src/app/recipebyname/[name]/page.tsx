@@ -18,8 +18,6 @@ const page = async ({
 	params: Promise<{ name?: string }>;
 	searchParams: Promise<{ page?: string }>;
 }) => {
-	// const userInputMealName = (await params).name;
-
 	const userInputMealName = decodeURIComponent((await params).name || "");
 
 	const { isSuccess, message, data } =
